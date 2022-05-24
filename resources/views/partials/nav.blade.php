@@ -12,4 +12,5 @@
 </form>
 @else
 <a href="/login">Login</a>
+<a href="/register/create">Register</a>
 @endauth
