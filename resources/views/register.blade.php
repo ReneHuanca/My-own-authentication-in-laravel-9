@@ -1,4 +1,8 @@
-@include('partials.nav')
+@extends('layouts.app')
+
+@section('title', 'register')
+
+@section('content')
 <h3>Register</h3>
 <form action="{{ route('register.store') }}" method="POST">
     @csrf
@@ -12,3 +16,4 @@
     @error('password_confirmation') {{ $message }} @enderror <br>
     <input type="submit" value="Save">
 </form>
+@endsection

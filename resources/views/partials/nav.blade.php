@@ -1,9 +1,9 @@
 @if(session('status'))
     {{ session('status') }} <br>
 @endif
-<a href="/">Home</a>
+<a href="/">Home</a> | 
 @auth
-<a href="/dashboard">Dashboard</a>
+<a href="/dashboard">Dashboard</a> | 
 <form style="display: inline" action="/logout" method="POST">
     @csrf
     <a href="#" onclick="this.closest('form').submit()">
@@ -11,6 +11,6 @@
     </a>
 </form>
 @else
-<a href="/login">Login</a>
+<a href="/login">Login</a> | 
 <a href="/register/create">Register</a>
 @endauth
